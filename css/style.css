@@ -428,9 +428,21 @@ header {
     font-size: 40px;
 }
 
-#video img {
+#video a {
+    position: relative;
+}
+
+#capa-video {
     width: 650px;
     height: 430px;
+}
+
+#play {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 45%;
+    top: -150%;
 }
 
 #video button {
