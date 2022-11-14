@@ -1,0 +1,504 @@
+* { box-sizing: border-box;}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Inter, Open Sans;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.container-style {
+    margin: 0 auto;
+    width: 1200px !important;
+}
+
+header {
+    width: 1180px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    line-height: 39px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.logo span{
+    color: #7000FF;
+}
+
+.logo div {
+    display: flex; 
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu > div > div {
+    margin: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.menu a:hover {
+    color: #7000FF;
+    transition: all .3s ease-in-out;
+}
+
+.menu nav {
+    margin-right: 20px;
+}
+
+.menu nav a {
+    margin-right: 40px;
+}
+
+#search input {
+    display: none;
+    padding-left: 10px;
+    margin-right: 15px;
+    border-radius: 15px;
+} 
+
+#wallet {
+    border: 1px solid #000000;
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+#wallet:hover{
+    background-color: #7000FF;
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+}
+
+#user {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+#lupa {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* 1ª Section topBanner */
+
+.text-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 20px;
+    color: #000000;
+}
+
+#topBanner{
+    margin-top: 40px;
+}
+
+#topBanner img {
+    width: 670px;
+    height: 450px;
+    border-radius: 24px;
+}
+
+.img-banner{
+    position: relative;
+    margin-left: 20px;
+}
+
+.descricao {
+    position: absolute;
+    background-color: rgba(112, 0, 255, 0);
+    font-family: 'Open Sans';
+    text-align: right;
+    padding: 30px 30px;
+    color: #ffffff;
+    top: 260px;
+    width: 670px;
+    height: 190px;
+    border-radius: 0 0 25px 25px;
+    background: linear-gradient(to bottom, transparent 0%, #7000FF);
+}
+
+.descricao h4 {
+    font-weight: 800;
+    font-size: 24x;
+    margin-top: 78px;
+}
+
+.descricao p {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: -15PX;
+}
+
+/* butões do slides */
+
+.buttonSlides {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.buttonSlides input {
+    display: none;
+}
+
+.buttonSlides label {
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+    background-color: #b8b4b470;
+    border-radius: 50%;
+    transition: width .3s;
+}
+
+.buttonSlides label:not(:first-child){
+    margin-left: 10px;
+}
+
+#btn-1:checked + label {
+    width: 40px;
+    background-color: #7000FF;
+    border: none;
+    border-radius: 30px;
+}
+
+#btn-2:checked + label {
+    width: 40px;
+    background-color: #7000FF;
+    border: none;
+    border-radius: 30px;
+}
+
+#btn-3:checked + label {
+    width: 40px;
+    background-color: #7000FF;
+    border: none;
+    border-radius: 30px;
+}
+
+#btn-4:checked + label {
+    width: 40px;
+    background-color: #7000FF;
+    border: none;
+    border-radius: 30px;
+}
+
+/* notable section */
+
+#notable, #collections {
+    margin: 0 auto;
+    width: 1240px;
+    margin-top: 80px;
+}
+
+
+#notable img, #collections img  {
+    width: 370px;
+}
+
+#notable h2, #collections h2 {
+    margin: 0 0 40px;
+    font-size: 45px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #000000;
+    text-align: left;
+
+}
+
+.notable-img, .collections-img{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.notable-img div {
+    margin-right: 45px;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    top: 960px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    box-shadow: 0 2px 2px #000000;
+}
+
+.arrow-left{
+    left: 35px;
+    z-index: 1;
+}
+
+.arrow-right {
+    right: 35px;
+    z-index: 1;
+}
+
+.arrow-left img, .arrow-right img {
+    width: 40px !important;
+    height: 50px;
+    text-align: center;
+}
+
+.arrow-left img {
+    transform: rotate(180deg);
+}
+
+.descricaoNotable {
+    position: absolute;
+    background-color: rgba(112, 0, 255, 0);
+    width: 362px;
+    height: 110px;
+    top: 354px;
+    margin-left: 4px;
+    text-align:start;
+    color: #ffffff;
+    font-family: 'Open Sans';
+    padding-left: 15px;
+    border-radius: 0 0 25px 28px;
+    background: linear-gradient(to bottom, transparent -1%, #7000FF);
+}
+
+.descricaoNotable h4 {
+    font-family: 'Open Sans';
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.descricaoNotable p {
+    margin-top: -10px;
+}
+
+/* Trending Creators section */
+
+#trending {
+    font-family: 'Inter';
+    margin-top: 80px;
+}
+
+#trending h2 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.trending-divs{
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-divs:not(:first-child){
+    padding-left: 40px;
+}
+
+.trending-divs h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+
+.trending-divs span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #32AF61;
+}
+
+.cards-img a {
+    display: flex;
+    align-items: center;
+}
+
+.cards-img:not(:last-child){
+    margin-bottom: 55px;
+}
+
+.cards-img img {
+    margin-right: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cards-img img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.cards-img p {
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+/* Seção collections */
+
+.collections-img {
+    position: relative;
+}
+
+#collections .arrow-left, #collections .arrow-right {
+    top: 2040px;
+}
+
+.descricaocollection {
+    position: absolute;
+    background-color: rgba(112, 0, 255, 0);
+    width: 362px;
+    height: 110px;
+    top: 260px;
+    margin-left: 4px;
+    text-align:start;
+    color: #ffffff;
+    font-family: 'Open Sans';
+    line-height: 5px;
+    padding: 0 30px;
+    border-radius: 0 0 25px 28px;
+    background: linear-gradient(to bottom, transparent 0%, #7000FF);
+}
+
+.descricaocollection h4 {
+    font-family: 'Inter';
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.descricaocollection p {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: #A9ABAB;
+    margin-bottom: 1px;
+}
+
+/* seção video */
+
+#video {
+    margin-top: 100px;
+    font-family: 'Inter';
+}
+
+#video h3 {
+
+    font-weight: 600;
+    font-size: 40px;
+}
+
+#video img {
+    width: 650px;
+    height: 430px;
+}
+
+#video button {
+    width: 273px;
+    height: 56px;
+    border: none;
+    border-radius: 30px;
+    background-color: #7000FF;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+#video button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+#video p {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.paragrafo-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-right: 0;
+}
+
+/* footer */
+
+.social {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social a {
+    position: relative;
+    margin-right: 10px;
+}
+
+.social img {
+    transition: all 0.5s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.termo {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+}
+
+.termo a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #000000;
+}
