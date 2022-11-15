@@ -6,14 +6,16 @@ $(document).ready(function(){
 })
 
 let imagens = [
-    ['0', 'assets/img/survivalMovie.png'],
-    ['1', 'assets/img/Metaverse.png'],
-    ['2', 'assets/img/Adidas.jpg'],
-    ['3', 'assets/img/Token_No_Fungibles.jpg']
+    ['0', 'assets/img/survivalMovie.png', 'Survival Movie', 'Geraldin Vergara García'],
+    ['1', 'assets/img/Metaverse.png', 'Metaverse Virtual World', 'LeewayHertz'],
+    ['2', 'assets/img/Adidas.jpg', 'Bored Ape Yacht Club', 'Adidas'],
+    ['3', 'assets/img/Token_No_Fungibles.jpg', 'Non Fungible Token','Iberdrola']
 ]
 
 function slides(e) {
     document.querySelector('.slide img').src = imagens[e][1]
+    document.querySelector('.slide h4').innerHTML = imagens[e][2]
+    document.querySelector('.slide p').innerHTML = imagens[e][3]
 }
 
 /* Controle dos butões slide Notable*/
