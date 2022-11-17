@@ -61,7 +61,7 @@ Array.prototype.forEach.call(controle, (button) => {
 
 /* Chrome */
 
-if(window.navigator.userAgent.indexOf('Chrome') > -1){
+/* if(window.navigator.userAgent.indexOf('Chrome') > -1){
   document.querySelector('.arrow-left').style.top = '155%';
   document.querySelector('.arrow-right').style.top = '155%';
 
@@ -69,7 +69,7 @@ if(window.navigator.userAgent.indexOf('Chrome') > -1){
   document.querySelector('#collections .arrow-right').style.top = '329%';
 }
 
-/* Edge */
+
 
 if(window.navigator.userAgent.indexOf('Edg') > -1){
   document.querySelector('.arrow-left').style.top = '150%';
@@ -80,7 +80,7 @@ if(window.navigator.userAgent.indexOf('Edg') > -1){
 }
 
 
-/* FireFox */
+
 
 if(window.navigator.userAgent.indexOf('Firefox') > -1){
 
@@ -88,7 +88,7 @@ if(window.navigator.userAgent.indexOf('Firefox') > -1){
   document.querySelector('#collections .arrow-right').style.top = '317%';
   
   
-}
+} */
 
 
 
