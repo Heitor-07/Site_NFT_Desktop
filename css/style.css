@@ -258,6 +258,10 @@ header {
     margin-right: 45px;
 }
 
+#notable button {
+    border: none;
+}
+
 .arrow-left, .arrow-right {
     position: absolute;
     width: 80px;

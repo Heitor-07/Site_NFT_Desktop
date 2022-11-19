@@ -5,6 +5,8 @@ $(document).ready(function(){
     })
 })
 
+/* Array de imagens dos slide Top */
+
 let imagens = [
     ['0', 'assets/img/survivalMovie.png', 'Survival Movie', 'Geraldin Vergara García'],
     ['1', 'assets/img/Metaverse.png', 'Metaverse Virtual World', 'LeewayHertz'],
@@ -20,19 +22,34 @@ function slides(e) {
 
 /* Controle dos butões slide Notable*/
 
-const controls = document.querySelector('.notable-img');
+const controleSlide1 = document.querySelectorAll('.control-Slide1');
 
-const controle = document.querySelectorAll('.control');
+const scrollSlide1 = document.querySelector('.notable-img');
 
-Array.prototype.forEach.call(controle, (button) => {
+Array.prototype.forEach.call(controleSlide1, (button) => {
   button.addEventListener('click', (e) => {
     
     isLeft = e.target.offsetParent.classList.contains('arrow-left');
+    isRight = e.target.offsetParent.classList.contains('arrow-right');
     
     if(isLeft){
-      controls.scrollLeft -= 400;
-    } else{
-      controls.scrollLeft += 400;
+      scrollSlide1.scrollLeft -= 400;
+      if(scrollSlide1.scrollLeft == 0){
+        document.querySelector('#notable .arrow-left').setAttribute('style', 'display: none');
+      } 
+
+      /* mostrar botão direito */
+      document.querySelector('#notable .arrow-right').setAttribute('style', 'display: block');
+
+    } 
+    if(isRight){
+      scrollSlide1.scrollLeft += 400;
+      document.querySelector('#notable .arrow-left').setAttribute('style', 'display: block');
+      
+      /* Ocultar botão direito quando chega no final do carrossel */
+      if(scrollSlide1.scrollLeft == 1250){
+        document.querySelector('#notable .arrow-right').setAttribute('style', 'display: none');
+      }
     }
 
   })
@@ -41,54 +58,54 @@ Array.prototype.forEach.call(controle, (button) => {
 
 /* Controle dos butões slide Collections*/
 
-let controlsCollections = document.querySelector('.collections-img');
+const controleSlide2 = document.querySelectorAll('.control-Slide2');
 
-Array.prototype.forEach.call(controle, (button) => {
+const scrollSlide2 = document.querySelector('.collections-img');
+
+Array.prototype.forEach.call(controleSlide2, (button) => {
   button.addEventListener('click', (e) => {
-    isLeft = e.target.offsetParent.classList.contains('arrow-left');
     
-    if(isLeft){
-      controlsCollections.scrollLeft -= 400;
-    } else{
-      controlsCollections.scrollLeft += 400;
-    }
+    isLeft = e.target.offsetParent.classList.contains('arrow-left');
+    isRight = e.target.offsetParent.classList.contains('arrow-right');
 
+    if(isLeft){
+      scrollSlide2.scrollLeft -= 400;
+      if(scrollSlide2.scrollLeft == 0){
+        document.querySelector('#collections .arrow-left').setAttribute('style', 'display: none');
+      }
+
+      /* mostrar botão direito */
+      document.querySelector('#collections .arrow-right').setAttribute('style', 'display: block');
+
+
+    } 
+    if(isRight){
+      scrollSlide2.scrollLeft += 400;
+      document.querySelector('#collections .arrow-left').setAttribute('style', 'display: block');
+      
+      /* Ocultar botão direito quando chega no final do carrossel */
+      if(scrollSlide2.scrollLeft == 1240){
+        document.querySelector('#collections .arrow-right').setAttribute('style', 'display: none');
+      }
+    }
+    
   })
 
 })
 
-/* Correção dos butões dos slides */
+mostrarBotao = () => {
 
-/* Chrome */
+  /* Ocultar botão esquerdo */
+  if(scrollSlide1.scrollLeft < 400){
+    document.querySelector('#notable .arrow-left').setAttribute('style', 'display: none');
+  } 
+  if(scrollSlide2.scrollLeft < 400){
+    document.querySelector('#collections .arrow-left').setAttribute('style', 'display: none');
+  } 
 
-/* if(window.navigator.userAgent.indexOf('Chrome') > -1){
-  document.querySelector('.arrow-left').style.top = '155%';
-  document.querySelector('.arrow-right').style.top = '155%';
-
-  document.querySelector('#collections .arrow-left').style.top = '329%';
-  document.querySelector('#collections .arrow-right').style.top = '329%';
 }
 
-
-
-if(window.navigator.userAgent.indexOf('Edg') > -1){
-  document.querySelector('.arrow-left').style.top = '150%';
-  document.querySelector('.arrow-right').style.top = '150%';
-
-  document.querySelector('#collections .arrow-left').style.top = '312%';
-  document.querySelector('#collections .arrow-right').style.top = '312%';
-}
-
-
-
-
-if(window.navigator.userAgent.indexOf('Firefox') > -1){
-
-  document.querySelector('#collections .arrow-left').style.top = '317%';
-  document.querySelector('#collections .arrow-right').style.top = '317%';
-  
-  
-} */
+mostrarBotao();
 
 
 
